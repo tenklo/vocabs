@@ -67,6 +67,9 @@ def main():
         if guess == w:
             print ("Richtig: "+ vok + " = "+ w)
             counter+=1
+        elif guess=="":
+            print("Falsch. Korrekt ist: "+vok+" = " + w) 
+            wrong.append(vok)
         elif guess in w:
             print("Gut. Korrekt ist: "+vok+" = " + w) 
             counter+=1
