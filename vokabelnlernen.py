@@ -1,94 +1,21 @@
 import random
 import time
+import vocabulary as v
 
 
-ersterVokabeltest = {
-    "to apply": "anwenden",
-    "to design": "entwerfen, konstruieren",
-    "website": "Website, Internetseite",
-    "to integrate": "integrieren",
-    "database": "Datenbank",
-    "focus": "Schwerpunkt",
-    "design": "Gestaltung, Design",
-    "to advise": "beraten",
-    "functionality": "Funktionalität",
-    "option": "Alternative, Möglichkeit",
-    "benefit": "Leistung, Nutzen",
-    "overall": "gesamt",
-    "suggestion": "Vorschlag",
-    "impact": "Wirkung, Einfluss",
-    "performance": "Ergebnis, Erfolg",
-    "thorough": "gründlich",
-    "analytical": "analytisch",
-    "verbal": "mündlich",
-    "graphic": "graphisch",
-    "to troubleshoot": "Fehler beheben",
-    "maintenance": "Wartung",
-    "LAN (local area network)": "lokales Netzwerk",
-    "WAN (wide area network)": "Weitverkehrsnetzwerk",
-    "implementation": "Einführung, Umsetzung, Implementierung",
-    "to recommend": "empfehlen",
-    "to schedule": "anberaumen",
-    "to handle": "umgehen mit",
-    "confidential": "vertraulich",
-    "broad": "breit angelegt",
-    "several": "mehrere",
-    "to recognize": "erkennen, anerkennen",
-    "career": "Beruf, Laufbahn, Karriere",
-    "to outline": "umreißen, skizzieren",
-    "systems analyst": "Systemberater",
-    "findings": "Ergebnisse",
-    "job title": "Berufsbezeichnung",
-    "to swap": "tauschen"
-}
-
-mehrVokabeln={
-    "apprenticeship": "Lehre, Ausbildung",
-    "tutor": "Klassenlehrer, Betreuer",
-    "organigram": "Organigramm",
-    "curious": "neugierig",
-    "major": "Haupt-, bedeutend",
-    "separate": "einzeln, gesondert",
-    "sheet": "Blatt",
-    "corporate": "Firmen-, Unternehmens-",
-    "enterprise": "Unternehmen",
-    "actually": "eigentlich, tatsächlich",
-    "workshop": "Werkstatt",
-    "faulty": "fehlerhaft, mangelhaft",
-    "to join": "beitreten, mitmachen, sich jemandem anschließen, mitkommen",
-    "premises": "Firmengelände",
-    "to refer sb. to sb./sth.": "jemanden an jemanden/ auf etwas verweisen",
-    "to implement": "ausführen, verwirklichen, realisieren",
-    "Human Resources": "Personalabteilung",
-    "accounting": "Buchhaltung",
-    "stockkeeping": "Lagerhaltung",
-    "reminder": "Erinnerung, Mahnung",
-    "to match": "zuordnen",
-    "purchase": "Kauf, Erwerb",
-    "to assess": "bewerten, einschätzen, abschätzen",
-    "faulty": "defekt",
-    "customer field service": "Kundendienst",
-    "enquiry": "Anfrage",
-    "order": "Bestellung, Auftrag",
-    "offer": "Angebot",
-    "description": "Beschreibung",
-    "stay": "Aufenthalt",
-    "organisation chart (org chart)": "Organigramm, OrganisationsschemOrganigramm, Organisationsschema"
-}
-
-
-
-vokabeln = ersterVokabeltest
+vokabeln = v.ersterVokabeltest
 
 
 def whenDone():
     text="\nGute Arbeit. " + str(counter) + " von " + str(countertried)+ " Vokabeln richtig bearbeitet."
     if (countertried - counter)==1:
         text= text +" An dieser Vokabel musst du noch arbeiten:"
+    elif countertried == 0:
+        text="\nMit der Einstellung wird das nichts."
     elif counter != countertried:
         text= text+ " An diesen Vokabeln musst du noch arbeiten:" 
     elif counter == countertried:
-        text=("Alles richtig! Bekommst du das nochmal hin?")
+        text=("\nAlles richtig! Bekommst du das nochmal hin?")
     print (text)
     for vok in wrong:
         print(vok," = ", vokabeln[vok])
