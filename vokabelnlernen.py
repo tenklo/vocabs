@@ -42,6 +42,42 @@ ersterVokabeltest = {
     "to swap": "tauschen"
 }
 
+mehrVokabeln={
+    "apprenticeship": "Lehre, Ausbildung",
+    "tutor": "Klassenlehrer, Betreuer",
+    "organigram": "Organigramm",
+    "curious": "neugierig",
+    "major": "Haupt-, bedeutend",
+    "separate": "einzeln, gesondert",
+    "sheet": "Blatt",
+    "corporate": "Firmen-, Unternehmens-",
+    "enterprise": "Unternehmen",
+    "actually": "eigentlich, tatsächlich",
+    "workshop": "Werkstatt",
+    "faulty": "fehlerhaft, mangelhaft",
+    "to join": "beitreten, mitmachen, sich jemandem anschließen, mitkommen",
+    "premises": "Firmengelände",
+    "to refer sb. to sb./sth.": "jemanden an jemanden/ auf etwas verweisen",
+    "to implement": "ausführen, verwirklichen, realisieren",
+    "Human Resources": "Personalabteilung",
+    "accounting": "Buchhaltung",
+    "stockkeeping": "Lagerhaltung",
+    "reminder": "Erinnerung, Mahnung",
+    "to match": "zuordnen",
+    "purchase": "Kauf, Erwerb",
+    "to assess": "bewerten, einschätzen, abschätzen",
+    "faulty": "defekt",
+    "customer field service": "Kundendienst",
+    "enquiry": "Anfrage",
+    "order": "Bestellung, Auftrag",
+    "offer": "Angebot",
+    "description": "Beschreibung",
+    "stay": "Aufenthalt",
+    "organisation chart (org chart)": "Organigramm, OrganisationsschemOrganigramm, Organisationsschema"
+}
+
+
+
 vokabeln = ersterVokabeltest
 
 
