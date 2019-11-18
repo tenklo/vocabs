@@ -47,10 +47,12 @@ vokabeln = ersterVokabeltest
 
 def whenDone():
     text="\nGute Arbeit. " + str(counter) + " von " + str(countertried)+ " Vokabeln richtig bearbeitet."
-    if counter != countertried:
+    if (countertried - counter)==1:
+        text= text +" An dieser Vokabel musst du noch arbeiten:"
+    elif counter != countertried:
         text= text+ " An diesen Vokabeln musst du noch arbeiten:" 
     elif counter == countertried:
-        print("Alles richtig! Bekommst du das nochmal hin?")
+        text=("Alles richtig! Bekommst du das nochmal hin?")
     print (text)
     for vok in wrong:
         print(vok," = ", vokabeln[vok])
