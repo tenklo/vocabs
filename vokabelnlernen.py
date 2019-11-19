@@ -32,7 +32,7 @@ def main():
         if guess == w:
             print ("Richtig: "+ vok + " = "+ w)
             counter+=1
-        elif guess == "e":
+        elif guess == "-e":
             break
         elif guess=="":
             print("Falsch. Korrekt ist: "+vok+" = " + w) 
