@@ -3,7 +3,7 @@ import time
 import vocabulary as v
 
 
-vokabeln = v.ersterVokabeltest
+vokabeln = v.currentVocabs
 
 
 def whenDone():
