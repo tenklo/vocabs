@@ -1,4 +1,4 @@
-ersterVokabeltest = {
+moduleOneA = {
     "to apply": "anwenden",
     "to design": "entwerfen, konstruieren",
     "website": "Website, Internetseite",
@@ -35,9 +35,37 @@ ersterVokabeltest = {
     "systems analyst": "Systemberater",
     "findings": "Ergebnisse",
     "job title": "Berufsbezeichnung",
-    "to swap": "tauschen"
+    "to swap": "tauschen",
 }
 
+amazonSheet ={
+    "high-rise": "Hochhaus",
+    "to range": "reichen, sich bewegen zwischen",
+    "reportedly": "angeblich, wie gemeldet",
+    "recent": "neu, letzte",
+    "to promote": "verbreiten",
+    "discriminatory practice": "diskriminierende Praxis",
+    "retail": "Einzelhandel",
+    "to debit": "abbuchen",
+    "receipt": "Beleg, Quittung",
+    "to dive into": "eintauchen",
+    "mock": "Probe- / Schein-",
+    "bottleneck": "Nadelöhr, Flaschenhals",
+    "to defeat": "zerschlagen, besiegen",
+    "intention": "Absicht",
+    "line": "(Warte-)Schlange",
+    "to tinker": "tüfteln",
+    "counter": "Theke",
+    "holdup": "Verzögerung",
+    "to shrink": "schrumpfen",
+    "bullish": "stur",
+    "to fall short of": "hinter etwas zurückbleiben",
+    "attempt": "Versuch",
+    "grocery": "Lebensmittel",
+    "according to": "laut",
+    "permit": "Zulassung",
+    "to abandon": "verlassen",
+}
 
 
 mehrVokabeln={
@@ -73,3 +101,20 @@ mehrVokabeln={
     "stay": "Aufenthalt",
     "organisation chart (org chart)": "Organigramm, OrganisationsschemOrganigramm, Organisationsschema"
 }
+
+
+def fuseDicts(listOfDicts):
+    output={}
+    for dictio in listOfDicts:
+       for key, val in dictio.items():
+            if key not in output:
+                output[key]=val
+            else:
+                output[key]=output[key]+", "+val
+      
+    return output
+
+
+ersterVokabeltest= fuseDicts([moduleOneA , amazonSheet])
+currentVocabs=ersterVokabeltest
+
