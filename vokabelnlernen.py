@@ -4,7 +4,16 @@ import vocabulary as v
 
 
 vokabeln = v.currentVocabs
+trainingsmode = True
 
+def toggleTrainingsmode():
+    global trainingsmode
+    if trainingsmode == True:
+        trainingsmode = False
+        print("Trainingsmode deaktiviert")
+    else:
+        trainingsmode = True
+        print("Trainingsmode aktiviert")
 
 def whenDone():
     text="\nGute Arbeit. " + str(counter) + " von " + str(countertried)+ " Vokabeln richtig bearbeitet."
@@ -21,7 +30,11 @@ def whenDone():
         print(vok," = ", vokabeln[vok])
 
 def manual():
-    print("Du hast folgende Optionen:\n-l    Lasse ausgeben, wie viele Vokabeln bearbeitet wurden und wie viele noch anstehen\n-e    Beende das Programm")
+    print("Du hast folgende Optionen:")
+    print("-l    Lasse ausgeben, wie viele Vokabeln bearbeitet wurden und wie viele noch anstehen")
+    print("-t    toggle trainingsmode (falsche Antworten müssen erneut getippt werden)")
+    print("-e    Beende das Programm")
+
 
 def process(vok,w,counter,countertried,wrong):
         print(vok)    
@@ -30,6 +43,9 @@ def process(vok,w,counter,countertried,wrong):
         if guess == w:
             print ("Richtig: "+ vok + " = "+ w)
             counter+=1
+        elif guess == "-t":
+            toggleTrainingsmode()
+            process(vok,w,counter,countertried,wrong)
         elif guess == "-e":
             exit()
         elif guess == "-man":
@@ -41,19 +57,27 @@ def process(vok,w,counter,countertried,wrong):
         elif guess=="":
             print("Falsch. Korrekt ist: "+vok+" = " + w) 
             wrong.append(vok)
+            if trainingsmode == True:
+                time.sleep(1)
+                process(vok,w,counter,countertried,wrong)
         elif guess in w:
             print("Gut. Korrekt ist: "+vok+" = " + w) 
             counter+=1
         else:
             print("Falsch. Korrekt ist: "+vok+" = " + w) 
             wrong.append(vok)
+            if trainingsmode == True:
+                time.sleep(1)
+                process(vok,w,counter,countertried,wrong)
 
 def main():
-    print(str(len(vokabeln))+" Vokabeln stehen an. Gib -man für das Manual ein.")
-    global counter , countertried, wrong
+    global counter , countertried, wrong, trainingsmode
     counter = 0
     countertried = 0
     wrong =[]
+    print(str(len(vokabeln))+" Vokabeln stehen an. Gib -man für das Manual ein.")
+    if trainingsmode == True:
+        print("Trainingsmode ist aktiviert.")
     for vok, w in sorted(vokabeln.items(), key =lambda x: random.random()):
         process(vok, w,counter,countertried,wrong)
         countertried+=1
