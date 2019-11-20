@@ -15,7 +15,7 @@ def whenDone():
     elif counter != countertried:
         text= text+ " An diesen Vokabeln musst du noch arbeiten:" 
     elif counter == countertried:
-        text=("\nAlles richtig! Bekommst du das nochmal hin?")
+        text=text+"\nDamit hast du alles richtig! Bekommst du das nochmal hin?"
     print (text)
     for vok in wrong:
         print(vok," = ", vokabeln[vok])
