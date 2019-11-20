@@ -20,12 +20,10 @@ def whenDone():
     for vok in wrong:
         print(vok," = ", vokabeln[vok])
 
-def main():
-    global counter , countertried, wrong
-    counter = 0
-    countertried = 0
-    wrong =[]
-    for vok, w in sorted(vokabeln.items(), key =lambda x: random.random()):
+def manual():
+    print("Du hast folgende Optionen:\n-l    Lasse ausgeben, wie viele Vokabeln bearbeitet wurden und wie viele noch anstehen\n-e    Beende das Programm")
+
+def process(vok,w,counter,countertried,wrong):
         print(vok)    
         guess=input()
         
@@ -33,7 +31,13 @@ def main():
             print ("Richtig: "+ vok + " = "+ w)
             counter+=1
         elif guess == "-e":
-            break
+            exit()
+        elif guess == "-man":
+            manual()
+            process(vok,w,counter,countertried,wrong)
+        elif guess == "-l":
+            print(str(countertried) +" von "+str(len(vokabeln))+" Vokabeln bearbeitet.")
+            process(vok,w,counter,countertried,wrong)
         elif guess=="":
             print("Falsch. Korrekt ist: "+vok+" = " + w) 
             wrong.append(vok)
@@ -43,6 +47,15 @@ def main():
         else:
             print("Falsch. Korrekt ist: "+vok+" = " + w) 
             wrong.append(vok)
+
+def main():
+    print(str(len(vokabeln))+" Vokabeln stehen an. Gib -man für das Manual ein.")
+    global counter , countertried, wrong
+    counter = 0
+    countertried = 0
+    wrong =[]
+    for vok, w in sorted(vokabeln.items(), key =lambda x: random.random()):
+        process(vok, w,counter,countertried,wrong)
         countertried+=1
         time.sleep(1)
         print()
