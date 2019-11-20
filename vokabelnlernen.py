@@ -81,7 +81,8 @@ def process(vok,w,countertried,wrong,firstRun=True):
             process(vok,w,countertried,wrong)
         elif guess=="":
             print("Falsch. Korrekt ist: "+vok+" = " + w) 
-            wrong.append(vok)
+            if not vok in wrong:
+                wrong.append(vok)
             if trainingsmode == True:
                 time.sleep(1)
                 process(vok,w,countertried,wrong, False)
@@ -91,7 +92,8 @@ def process(vok,w,countertried,wrong,firstRun=True):
                 counter+=1
         else:
             print("Falsch. Korrekt ist: "+vok+" = " + w) 
-            wrong.append(vok)
+            if not vok in wrong:
+                wrong.append(vok)
             if trainingsmode == True:
                 time.sleep(1)
                 process(vok,w,countertried,wrong,False)
