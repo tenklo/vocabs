@@ -37,14 +37,15 @@ def manual():
     print("-e    Beende das Programm")
 
 
-def process(vok,w,countertried,wrong):
+def process(vok,w,countertried,wrong,firstRun=True):
         global counter
         print(vok)    
         guess=input()
         
         if guess == w:
             print ("Richtig: "+ vok + " = "+ w)
-            counter+=1
+            if firstRun:
+                counter+=1
         elif guess == "-t":
             toggleTrainingsmode()
             process(vok,w,countertried,wrong)
@@ -61,16 +62,17 @@ def process(vok,w,countertried,wrong):
             wrong.append(vok)
             if trainingsmode == True:
                 time.sleep(1)
-                process(vok,w,countertried,wrong)
+                process(vok,w,countertried,wrong, False)
         elif guess in w:
             print("Gut. Korrekt ist: "+vok+" = " + w) 
-            counter+=1
+            if firstRun:
+                counter+=1
         else:
             print("Falsch. Korrekt ist: "+vok+" = " + w) 
             wrong.append(vok)
             if trainingsmode == True:
                 time.sleep(1)
-                process(vok,w,countertried,wrong)
+                process(vok,w,countertried,wrong,False)
 
 def main():
     global counter , countertried, wrong, trainingsmode
