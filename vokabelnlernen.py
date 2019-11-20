@@ -5,8 +5,8 @@ import vocabulary as v
 
 vokabeln = v.currentVocabs
 trainingsmode = True
-mode = 0
-_mode=0
+mode = 2   # choose number from 0-2, depending on which mode you want (see manual)
+_mode=0    #not to mess with, shouldnt matter if you do tho
 
 def toggleTrainingsmode():
     global trainingsmode
