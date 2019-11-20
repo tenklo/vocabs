@@ -85,7 +85,6 @@ def main():
         countertried+=1
         time.sleep(1)
         print()
-    whenDone()
 
 try:
     main()
