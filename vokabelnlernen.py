@@ -16,6 +16,7 @@ def toggleTrainingsmode():
         print("Trainingsmode aktiviert")
 
 def whenDone():
+    global counter
     text="\nGute Arbeit. " + str(counter) + " von " + str(countertried)+ " Vokabeln richtig bearbeitet."
     if (countertried - counter)==1:
         text= text +" An dieser Vokabel musst du noch arbeiten:"
@@ -36,7 +37,8 @@ def manual():
     print("-e    Beende das Programm")
 
 
-def process(vok,w,counter,countertried,wrong):
+def process(vok,w,countertried,wrong):
+        global counter
         print(vok)    
         guess=input()
         
@@ -45,21 +47,21 @@ def process(vok,w,counter,countertried,wrong):
             counter+=1
         elif guess == "-t":
             toggleTrainingsmode()
-            process(vok,w,counter,countertried,wrong)
+            process(vok,w,countertried,wrong)
         elif guess == "-e":
             exit()
         elif guess == "-man":
             manual()
-            process(vok,w,counter,countertried,wrong)
+            process(vok,w,countertried,wrong)
         elif guess == "-l":
             print(str(countertried) +" von "+str(len(vokabeln))+" Vokabeln bearbeitet.")
-            process(vok,w,counter,countertried,wrong)
+            process(vok,w,countertried,wrong)
         elif guess=="":
             print("Falsch. Korrekt ist: "+vok+" = " + w) 
             wrong.append(vok)
             if trainingsmode == True:
                 time.sleep(1)
-                process(vok,w,counter,countertried,wrong)
+                process(vok,w,countertried,wrong)
         elif guess in w:
             print("Gut. Korrekt ist: "+vok+" = " + w) 
             counter+=1
@@ -68,7 +70,7 @@ def process(vok,w,counter,countertried,wrong):
             wrong.append(vok)
             if trainingsmode == True:
                 time.sleep(1)
-                process(vok,w,counter,countertried,wrong)
+                process(vok,w,countertried,wrong)
 
 def main():
     global counter , countertried, wrong, trainingsmode
@@ -79,7 +81,7 @@ def main():
     if trainingsmode == True:
         print("Trainingsmode ist aktiviert.")
     for vok, w in sorted(vokabeln.items(), key =lambda x: random.random()):
-        process(vok, w,counter,countertried,wrong)
+        process(vok, w,countertried,wrong)
         countertried+=1
         time.sleep(1)
         print()
@@ -88,4 +90,6 @@ def main():
 try:
     main()
 except KeyboardInterrupt:
+    pass
+finally:
     whenDone()
