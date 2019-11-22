@@ -111,10 +111,10 @@ def fuseDicts(listOfDicts):
                 output[key]=val
             else:
                 output[key]=output[key]+", "+val
-      
+
     return output
 
 
 ersterVokabeltest= fuseDicts([moduleOneA , amazonSheet])
+#put the vocabs you actually want to practice here:
 currentVocabs=ersterVokabeltest
-
