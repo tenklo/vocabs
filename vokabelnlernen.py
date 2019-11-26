@@ -12,10 +12,10 @@ def toggleTrainingsmode():
     global trainingsmode
     if trainingsmode == True:
         trainingsmode = False
-        print("Trainingsmode deaktiviert")
+        print("Trainingsmodus deaktiviert")
     else:
         trainingsmode = True
-        print("Trainingsmode aktiviert")
+        print("Trainingsmodus aktiviert")
 
 def whenDone():
     global counter
@@ -35,7 +35,7 @@ def whenDone():
 def manual():
     print("Du hast folgende Optionen:")
     print("-l    Lasse ausgeben, wie viele Vokabeln bearbeitet wurden und wie viele noch anstehen")
-    print("-t    toggle trainingsmode (falsche Antworten müssen erneut getippt werden)")
+    print("-t    toggle Trainingsmodus (falsche Antworten müssen erneut getippt werden)")
     print("-d 0/1/2    Wechsel zwischen 0: englisch - deutsch, 1: deutsch - englisch, 2: zufällig")
     print("-e    Beende das Programm")
 
@@ -159,7 +159,7 @@ def main():
     elif mode == 2:
         print("Zufallsmodus aktiviert.")
     if trainingsmode == True:
-        print("Trainingsmode ist aktiviert.")
+        print("Trainingsmodus ist aktiviert.")
     print("\n\n")
     for vok, w in sorted(vokabeln.items(), key =lambda x: random.random()):
         process(vok, w,countertried,wrong)
@@ -169,6 +169,8 @@ def main():
 
 try:
     main()
+except UnicodeError:
+    print("ascii/Sonderzeichen/utf-8 Problem. Das Programm mit PYTHONIOENCODING=utf-8 aufzurufen ist ein fix")
 except KeyboardInterrupt:
     pass
 finally:
