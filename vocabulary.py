@@ -105,7 +105,7 @@ module1B ={
     "offer": "Angebot",
     "description": "Beschreibung",
     "stay": "Aufenthalt",
-    "organisation chart (org chart)": "Organigramm, Organisationsschema"
+    "organisation chart (org chart)": "Organigramm, Organisationsschema",
     "politeness": "Höflichkeit",
     "pleasantry": "höfliche Floskel",
     "profitability": "Rentabilität",
@@ -143,4 +143,4 @@ def fuseDicts(listOfDicts):
 
 ersterVokabeltest= fuseDicts([moduleOneA , amazonSheet])
 #put the vocabs you actually want to practice here:
-currentVocabs=ersterVokabeltest
+currentVocabs=module1B
