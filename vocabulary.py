@@ -36,6 +36,12 @@ moduleOneA = {
     "findings": "Ergebnisse",
     "job title": "Berufsbezeichnung",
     "to swap": "tauschen",
+    "confident": "sicher, selbstbewusst",
+    "appropriate": "angemessen, passend",
+    "existing": "bestehend",
+    "trade fair": "Messe",
+    "job fair": "Jobmesse"
+
 }
 
 amazonSheet ={
@@ -68,7 +74,7 @@ amazonSheet ={
 }
 
 
-mehrVokabeln={
+module1B ={
     "apprenticeship": "Lehre, Ausbildung",
     "tutor": "Klassenlehrer, Betreuer",
     "organigram": "Organigramm",
@@ -99,7 +105,27 @@ mehrVokabeln={
     "offer": "Angebot",
     "description": "Beschreibung",
     "stay": "Aufenthalt",
-    "organisation chart (org chart)": "Organigramm, OrganisationsschemOrganigramm, Organisationsschema"
+    "organisation chart (org chart)": "Organigramm, Organisationsschema"
+    "politeness": "Höflichkeit",
+    "pleasantry": "höfliche Floskel",
+    "profitability": "Rentabilität",
+    "to chat": "sich unterhalten",
+    "health": "Gesundheit",
+    "pleasant": "angenehm",
+    "to waste time": "Zeit verschwenden",
+    "impression": "Eindruck",
+    "conference": "Tagung",
+    "minutes": "Protokoll",
+    "polite": "höflich",
+    "usual": "gewöhnlich, üblich, normal",
+    "upset": "verärgert",
+    "stranger": "Unbekannte(r)",
+    "on the other hand": "andererseits",
+    "in charge of": "verantwortlich für",
+    "cash register": "Kasse",
+    "given name": "Vorname",
+    "family name": "Nachname",
+    "to intend": "beabsichtigen",
 }
 
 
