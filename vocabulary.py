@@ -139,6 +139,30 @@ moduleTwoA = {
     "speaker": "Lautsprecher"
 }
 
+brexit = {
+    "taxes":"Steuern, Abgaben",
+    "tariffs/customs":"Zölle",
+    "trade agreement":"Handelsabkommen",
+    "European Union":"Europäische Union",
+    "finances":"Finanzen, Geldmittel",
+    "referendum":"Abstimmung, Volksbegehren, Bürgerentscheid, Referendum",
+    "foreign relations":"Außenbeziehungen, Auslandsbeziehungen",
+    "deal":"Abkommen, Übereinkunft",
+    "failure":"Misserfolg, Scheitern, Versagen, vergeblicher Versuch",
+    "decision":"Entscheidung, Beschluss, Urteil",
+    "deadline":"Stichtag, Fristablauf",
+    "agreement":"Vereinbarung, Einigung, Abkommen",
+    "amendments":"Ergänzungen, Änderungen, Zusatzartikel zur Verfassung",
+    "obstacle":"Hindernis, Hürde",
+    "extension":"Erweiterung, Verlängerung",
+    "delay":"Verzögerung, Verspätung",
+    "to negotiate":"verhandeln, abschließen",
+    "Boris Johnson":"Premierminister Vereinigtes Königreich seit 2019, Conservative Party, teilt Trumps Friseur",
+    "Theresa May":"Premierministerin Vereinigtes Königreich bis 2019",
+    "Nigel Farage":"Mitgründer Brexitpartei",
+    "British Parliament":"Parlament des Vereinigten Königreichs",
+}
+
 def fuseDicts(listOfDicts):
     output={}
     for dictio in listOfDicts:
