@@ -161,6 +161,18 @@ brexit = {
     "Theresa May":"Premierministerin Vereinigtes Königreich bis 2019",
     "Nigel Farage":"Mitgründer Brexitpartei",
     "British Parliament":"Parlament des Vereinigten Königreichs",
+    "Prime Minister":"Ministerpräsident",
+    "Conservative Party":"Konservative Partei, mitterechts",
+    "Labour Party":"Arbeitspartei, sozialdemokratisch",
+    "Liberal Democrats":"Liberaldemokraten, liberal",
+    "UKIP (United Kingdom Independence Party)":"Partei für die Unabhängigkeit des Vereinigten Königreichs, rechtspopulistisch",
+    "Brexit Party":"Brexit-Partei, rechts",
+    "protesters":"Aufbegehrende, Demonstranten",
+    "protectionism":"Schutzpolitik",
+    "government":"Regierung",
+    "controversial":"umstritten, kontrovers",
+    "resistance":"Widerstand, Abwehr, Gegenwehr",
+    "gridlock":"Stillstand, festgefahrene Situation",
 }
 
 def fuseDicts(listOfDicts):
