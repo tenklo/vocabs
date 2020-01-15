@@ -25,7 +25,7 @@ def whenDone():
     elif countertried == 0:
         text="\nMit der Einstellung wird das nichts."
     elif counter != countertried:
-        text= text+ " An diesen Vokabeln musst du noch arbeiten:" 
+        text= text+ " An diesen Vokabeln musst du noch arbeiten:"
     elif counter == countertried:
         text=text+"\nDamit hast du alles richtig! Bekommst du das nochmal hin?"
     print (text)
@@ -34,10 +34,10 @@ def whenDone():
 
 def manual():
     print("Du hast folgende Optionen:")
-    print("-l    Lasse ausgeben, wie viele Vokabeln bearbeitet wurden und wie viele noch anstehen")
-    print("-t    toggle Trainingsmodus (falsche Antworten müssen erneut getippt werden)")
-    print("-d 0/1/2    Wechsel zwischen 0: englisch - deutsch, 1: deutsch - englisch, 2: zufällig")
-    print("-e    Beende das Programm")
+    print("-l           Lasse ausgeben, wie viele Vokabeln bearbeitet wurden und wie viele noch anstehen")
+    print("-t           toggle Trainingsmodus (falsche Antworten müssen erneut getippt werden)")
+    print("-d 0/1/2     Wechsel zwischen 0: englisch - deutsch, 1: deutsch - englisch, 2: zufällig")
+    print("-e           Beende das Programm")
 
 
 def process(vok,w,countertried,wrong,firstRun=True):
@@ -49,8 +49,8 @@ def process(vok,w,countertried,wrong,firstRun=True):
     elif mode == 2 and firstRun==True:
         _mode = random.randrange(0,2)
 
-    if _mode == 0:    
-        print("englisch: "+vok)    
+    if _mode == 0:
+        print("englisch: "+vok)
         guess=input()
         if guess == w:
             print ("Richtig: "+ vok + " = "+ w)
@@ -80,26 +80,26 @@ def process(vok,w,countertried,wrong,firstRun=True):
             print(str(countertried) +" von "+str(len(vokabeln))+" Vokabeln bearbeitet.")
             process(vok,w,countertried,wrong)
         elif guess=="":
-            print("Falsch. Korrekt ist: "+vok+" = " + w) 
+            print("Falsch. Korrekt ist: "+vok+" = " + w)
             if not vok in wrong:
                 wrong.append(vok)
             if trainingsmode == True:
                 time.sleep(1)
                 process(vok,w,countertried,wrong, False)
         elif guess in w:
-            print("Gut. Korrekt ist: "+vok+" = " + w) 
+            print("Gut. Korrekt ist: "+vok+" = " + w)
             if firstRun:
                 counter+=1
         else:
-            print("Falsch. Korrekt ist: "+vok+" = " + w) 
+            print("Falsch. Korrekt ist: "+vok+" = " + w)
             if not vok in wrong:
                 wrong.append(vok)
             if trainingsmode == True:
                 time.sleep(1)
                 process(vok,w,countertried,wrong,False)
 
-    if _mode == 1:    
-        print("deutsch: "+w)    
+    if _mode == 1:
+        print("deutsch: "+w)
         guess=input()
         if guess == vok:
             print ("Richtig: "+ vok + " = "+ w)
@@ -129,17 +129,17 @@ def process(vok,w,countertried,wrong,firstRun=True):
             print(str(countertried) +" von "+str(len(vokabeln))+" Vokabeln bearbeitet.")
             process(vok,w,countertried,wrong)
         elif guess=="":
-            print("Falsch. Korrekt ist: "+vok+" = " + w) 
+            print("Falsch. Korrekt ist: "+vok+" = " + w)
             wrong.append(vok)
             if trainingsmode == True:
                 time.sleep(1)
                 process(vok,w,countertried,wrong, False)
         elif guess in vok:
-            print("Gut. Korrekt ist: "+vok+" = " + w) 
+            print("Gut. Korrekt ist: "+vok+" = " + w)
             if firstRun:
                 counter+=1
         else:
-            print("Falsch. Korrekt ist: "+vok+" = " + w) 
+            print("Falsch. Korrekt ist: "+vok+" = " + w)
             wrong.append(vok)
             if trainingsmode == True:
                 time.sleep(1)
