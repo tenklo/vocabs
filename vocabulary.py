@@ -187,7 +187,7 @@ def fuseDicts(listOfDicts):
     return output
 
 
-ersterVokabeltest= fuseDicts([moduleOneA , amazonSheet])
+#ersterVokabeltest= fuseDicts([moduleOneA , amazonSheet])
 #put the vocabs you actually want to practice here:
 #currentVocabs=module1B
-currentVocabs=brexit
+currentVocabs=fuseDicts([moduleOneA, amazonSheet, brexit])
