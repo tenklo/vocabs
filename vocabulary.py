@@ -175,6 +175,44 @@ brexit = {
     "gridlock":"Stillstand, festgefahrene Situation",
 }
 
+
+myCompany = {
+    "chairman (of the board)":"Regierung",
+    "device":"Regierung",
+    "connection technology":"Regierung",
+    "head office":"Regierung",
+    "headquarters":"Regierung",
+    "to run a business":"Regierung",
+    "(general) partner":"Regierung",
+    "purchasing":"Regierung",
+    "sales":"Regierung",
+    "Senior Vice President":"Regierung",
+    "mechanical engineering":"Regierung",
+    "component":"Regierung",
+    "government":"Regierung",
+    "to manufacture":"Regierung",
+    "to produce":"Regierung",
+    "connector":"Regierung",
+    "automation":"Regierung",
+    "data processing":"Regierung",
+    "vocational training":"Regierung",
+    "apprenticeship":"Regierung",
+    "trainee":"Regierung",
+    "sector":"Regierung",
+    "CEO (Chief Executive Officer)":"Regierung",
+    "to report to":"Regierung",
+    "to liaise with":"Regierung",
+    "responsibility":"Regierung",
+    "goal strategy":"Regierung",
+    "organigram":"Regierung",
+    "platform":"Regierung",
+    "benefit":"Regierung",
+    "client":"Regierung",
+    "government":"Regierung",
+    "quality assurance":"Regierung",
+    "quality control":"Regierung",
+    "subsidary":"Regierung",
+
 def fuseDicts(listOfDicts):
     output={}
     for dictio in listOfDicts:
