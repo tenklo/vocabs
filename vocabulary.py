@@ -180,8 +180,7 @@ myCompany = {
     "chairman (of the board)":"Vorstandsvorsitzender",
     "device":"Gerät",
     "connection technology":"Verbindungstechnik",
-    "head office":"Hauptsitz",
-    "headquarters":"Hauptsitz",
+    "headquarters, head office":"Hauptsitz",
     "to run a business":"ein Geschäft führen",
     "(general) partner":"aktiver Teilhaber, unbeschränkt haftender Partner",
     "purchasing":"Einkauf, Beschaffung",
@@ -189,8 +188,7 @@ myCompany = {
     "Senior Vice President":"Senior-Vizepräsident",
     "mechanical engineering":"Maschinenbau",
     "component":"Bestandteil",
-    "to manufacture":"anfertigen, herstellen, produzieren",
-    "to produce":"anfertigen, herstellen, produzieren",
+    "to manufacture, to produce":"anfertigen, herstellen, produzieren",
     "connector":"Stecker, Anschluss, Verbinder, Übergangsstelle",
     "automation":"Automatisierung, Automatisierungstechnik",
     "data processing":"Datenverarbeitung",
@@ -207,9 +205,9 @@ myCompany = {
     "platform":"Bahnsteig, Gleis, Plattform",
     "benefit":"Vorteil, Nutzen, Leistung",
     "client":"Kunde, Auftraggeber",
-    "quality assurance":"Qualitätssicherung",
-    "quality control":"Qualitätssicherung",
-    "subsidiary":"Tochtergesellschaft, Niderlassung, Tochterunternehmen, Nebenstelle",
+    "quality control, quality assurance":"Qualitätssicherung",
+    "subsidiary":"Tochtergesellschaft, Niderlassung, Tochterunternehmen, Nebenstelle"
+}
 
 def fuseDicts(listOfDicts):
     output={}
